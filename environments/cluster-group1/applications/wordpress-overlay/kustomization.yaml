@@ -4,6 +4,8 @@ kind: Kustomization
 bases:
 - ../../../../base/applications/wordpress
 
+namespace: wordpress
+
 commonLabels:
   app: wordpress
 
