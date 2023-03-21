@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1
+kind: Issuer
+metadata:
+  name: ca-issuer-selfsigned
+spec:
+  selfSigned: {}
+---
+apiVersion: cert-manager.io/v1
+kind: Certificate
+metadata:
+  name: wordpress-cert
+spec:
+  commonName: foo.bar.com
+  dnsNames:
+  - foo.bar.com
+  issuerRef:
+    name: ca-issuer-selfsigned
+    kind: Issuer
+  secretName: wordpress-tls
