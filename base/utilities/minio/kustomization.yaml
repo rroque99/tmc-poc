@@ -3,6 +3,6 @@ kind: Kustomization
 namespace: minio
 resources:
   - namespace.yaml
-#  - repository.yaml
+  - repository.yaml
   - release.yaml
 
