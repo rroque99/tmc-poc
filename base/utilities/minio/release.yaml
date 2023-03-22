@@ -1,0 +1,27 @@
+---
+    apiVersion: helm.toolkit.fluxcd.io/v2beta1
+    kind: HelmRelease
+    metadata:
+      name: minio
+    spec:
+      interval: 5m
+      chart:
+        spec:
+          version: "12.1.8"
+          chart: minio
+          sourceRef:
+            kind: HelmRepository
+            name: bitnami
+          interval: 60m
+      install:
+        crds: Create
+      upgrade:
+        crds: CreateReplace
+      values:
+        auth:
+          rootUser: admin
+          rootPassword: VMware1!
+        service:
+          type: LoadBalancer
+
+    
