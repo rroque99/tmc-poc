@@ -4,6 +4,7 @@ generatorOptions:
   disableNameSuffixHash: true
 resources:
 - namespace.yaml
+- contour-sa.yaml
 - contour-package-install.yaml
 secretGenerator:
 - name: contour-packages-values
