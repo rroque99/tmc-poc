@@ -4,5 +4,5 @@ kind: Kustomization
 resources:
 #- ./pre-reqs
 - ./namespaces
-#- ./cert-manager
+- ./cert-manager
 #- ./contour
