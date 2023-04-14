@@ -5,4 +5,4 @@ resources:
 #- ./pre-reqs
 - ./namespaces
 - ./cert-manager
-#- ./contour
+- ./contour
