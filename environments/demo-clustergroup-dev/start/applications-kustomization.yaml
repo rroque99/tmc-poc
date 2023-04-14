@@ -1,0 +1,16 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: demo-clustergroup-dev-apps
+  namespace: tanzu-continuousdelivery-resources
+spec:
+  dependsOn:
+    - name: demo-clustergroup-dev-utilities
+  interval: 1m0s
+  path: ./environments/demo-clustergroup-dev/applications
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: tmc-git-repo            # Must match the name of the GitRepo you added in TMC
+    namespace: tanzu-continuousdelivery-resources
