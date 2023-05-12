@@ -5,6 +5,8 @@ metadata:
   name: demo-clustergroup-dev-utilities
   namespace: tanzu-continuousdelivery-resources
 spec:
+  dependsOn:
+    - name: demo-clustergroup-dev-pre-reqs
   interval: 1m0s
   path: ./environments/demo-clustergroup-dev/utilities
   prune: true
