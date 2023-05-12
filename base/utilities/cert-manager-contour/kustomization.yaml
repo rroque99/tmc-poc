@@ -3,6 +3,6 @@ kind: Kustomization
 
 resources:
 #- ./pre-reqs
-- ./namespaces
+#- ./namespaces
 - ./cert-manager
 - ./contour
