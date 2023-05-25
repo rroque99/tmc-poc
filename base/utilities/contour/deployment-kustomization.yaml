@@ -1,0 +1,21 @@
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: contour-deployment
+  namespace: tanzu-continuousdelivery-resources
+spec:
+  dependsOn:
+    - name: contour-pre-reqs
+  interval: 1m0s
+  path: ./base/utilities/cert-manager/deployment
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: tmc-git-repo
+    namespace: tanzu-continuousdelivery-resources
+  healthChecks:
+    - apiVersion: apps/v1
+      kind: Deployment
+      name: cert-manager
+      namespace: cert-manager
