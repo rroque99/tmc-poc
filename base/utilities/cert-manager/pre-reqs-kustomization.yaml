@@ -6,7 +6,7 @@ metadata:
   namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 1m0s
-  path: ./base/utilites/cert-manager/pre-reqs
+  path: ./base/utilities/cert-manager/pre-reqs
   prune: false
   sourceRef:
     kind: GitRepository
