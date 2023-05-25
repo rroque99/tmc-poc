@@ -2,13 +2,13 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: demo-clustergroup-prod-utilities
+  name: cert-manager-deployment
   namespace: tanzu-continuousdelivery-resources
 spec:
   dependsOn:
-    - name: demo-clustergroup-prod-pre-reqs
+    - name: cert-manager-pre-reqs
   interval: 1m0s
-  path: ./environments/demo-clustergroup-prod/utilities
+  path: ./base/utilities/cert-manager/deployment
   prune: true
   sourceRef:
     kind: GitRepository
@@ -19,7 +19,3 @@ spec:
       kind: Deployment
       name: cert-manager
       namespace: cert-manager
-    - apiVersion: apps/v1
-      kind: Deployment
-      name: contour
-      namespace: tanzu-system-ingress      

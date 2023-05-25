@@ -2,12 +2,12 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: demo-clustergroup-prod-pre-reqs
+  name: cert-manager-pre-reqs
   namespace: tanzu-continuousdelivery-resources
 spec:
   interval: 1m0s
-  path: ./environments/demo-clustergroup-prod/pre-reqs
-  prune: true
+  path: ./base/utilites/cert-manager/pre-reqs
+  prune: false
   sourceRef:
     kind: GitRepository
     name: tmc-git-repo
