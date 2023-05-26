@@ -8,7 +8,7 @@ spec:
   dependsOn:
     - name: contour-pre-reqs
   interval: 1m0s
-  path: ./base/utilities/cert-manager/deployment
+  path: ./base/utilities/contour/deployment
   prune: true
   sourceRef:
     kind: GitRepository
