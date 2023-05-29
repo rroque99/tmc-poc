@@ -4,6 +4,7 @@ generatorOptions:
   disableNameSuffixHash: true
 resources:
 - contour-package-install.yaml
+- contour-ingressclass.yaml
 secretGenerator:
 - name: contour-packages-values
   namespace: tmc-gitops-packages
