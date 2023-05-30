@@ -1,0 +1,6 @@
+apiVersion: networking.k8s.io/v1
+kind: IngressClass
+metadata:
+  name: avi
+spec:
+  controller: ako.vmware.com/v1alpha1
