@@ -10,13 +10,13 @@ commonLabels:
   app: wordpress
 
 
-images:
-- name: mysql
-  newName: harbor.navneetv.com/proxy-cache/library/mysql
-  newTag: "8.0"
-- name: wordpress
-  newName: harbor.navneetv.com/proxy-cache/library/wordpress
-  newTag: "6.1.1-php8.1-apache"
+#images:
+#- name: mysql
+#  newName: harbor.navneetv.com/proxy-cache/library/mysql
+#  newTag: "8.0"
+#- name: wordpress
+#  newName: harbor.navneetv.com/proxy-cache/library/wordpress
+#  newTag: "6.1.1-php8.1-apache"
 
 secretGenerator:
 - name: mysql-pass
